@@ -8,12 +8,13 @@
 
 DockerHub repository: [https://hub.docker.com/r/hussainweb/drupalqa](https://hub.docker.com/r/hussainweb/drupalqa)
 
-This image currently only supports Debian along with PHP 7.1 and PHP 7.2. Once the base PHPQA image adds support for PHP 7.3, I will add it here as well.
+This image currently only supports Debian along with PHP 7.1, 7.2, and 7.3.
 
 ### Debian
 
 - `php7.1` ([7.1/debian/Dockerfile](7.1/debian/Dockerfile))
 - `php7.2` ([7.2/debian/Dockerfile](7.2/debian/Dockerfile))
+- `php7.3` ([7.3/debian/Dockerfile](7.3/debian/Dockerfile))
 
 ## Available Tools
 

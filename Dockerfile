@@ -1,4 +1,4 @@
-FROM jakzal/phpqa:php7.2
+FROM jakzal/phpqa:php7.3
 
 LABEL maintainer="hussainweb@gmail.com"
 
