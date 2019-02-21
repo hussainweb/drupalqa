@@ -16,11 +16,11 @@ RUN composer require --prefer-dist "squizlabs/php_codesniffer:^3.3" "drupal/code
 
 # Let's remove the phpcs installed by phpqa as it cannot
 # autoload classes required in Drupal code sniffs.
-RUN rm /usr/local/bin/phpcs && \
-    ln -s $TARGET_DIR/vendor/bin/phpcs /usr/local/bin && \
-    ln -s $TARGET_DIR/pareviewsh/pareview.sh /usr/local/bin/pareview && \
-    chmod +x /usr/local/bin/pareview
+RUN rm $TOOLBOX_TARGET_DIR/phpcs && \
+    ln -s $TARGET_DIR/vendor/bin/phpcs $TOOLBOX_TARGET_DIR && \
+    ln -s $TARGET_DIR/pareviewsh/pareview.sh $TOOLBOX_TARGET_DIR/pareview && \
+    chmod +x $TOOLBOX_TARGET_DIR/pareview
 
 RUN phpcs --config-set installed_paths $TARGET_DIR/vendor/drupal/coder/coder_sniffer/,$TARGET_DIR/drupalsecure
 
-CMD php /usr/local/bin/tools.php list
+CMD php $TOOLBOX_TARGET_DIR/toolbox list-tools
