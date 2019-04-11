@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get install -y file
 
 RUN composer require --prefer-dist "squizlabs/php_codesniffer:^3.3" "drupal/coder:dev-8.x-2.x" && \
-    git clone http://git.drupal.org/sandbox/coltrane/1921926.git drupalsecure && \
+    git clone https://git.drupalcode.org/sandbox/coltrane-1921926.git drupalsecure && \
     git clone https://github.com/klausi/pareviewsh.git
 
 # Let's remove the phpcs installed by phpqa as it cannot
