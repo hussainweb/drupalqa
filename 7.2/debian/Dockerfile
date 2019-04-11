@@ -3,6 +3,7 @@ FROM jakzal/phpqa:php7.2
 LABEL maintainer="hussainweb@gmail.com"
 
 ENV TARGET_DIR="/usr/local/lib/drupalqa"
+ENV DRUPAL_CHECK_VERSION="1.0.6"
 
 WORKDIR ${TARGET_DIR}
 
@@ -13,7 +14,8 @@ RUN apt-get update && \
 RUN composer require --prefer-dist "squizlabs/php_codesniffer:^3.3" "drupal/coder:dev-8.x-2.x" && \
     git clone https://git.drupalcode.org/sandbox/coltrane-1921926.git drupalsecure && \
     git clone https://github.com/klausi/pareviewsh.git && \
-    rm -rf ./drupalsecure/.git/ ./pareviewsh/.git/
+    rm -rf ./drupalsecure/.git/ ./pareviewsh/.git/ && \
+    curl -Ls https://github.com/mglaman/drupal-check/releases/download/$DRUPAL_CHECK_VERSION/drupal-check.phar -o $TOOLBOX_TARGET_DIR/drupal-check && chmod +x $TOOLBOX_TARGET_DIR/drupal-check
 
 # Let's remove the phpcs installed by phpqa as it cannot
 # autoload classes required in Drupal code sniffs.

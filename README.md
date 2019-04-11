@@ -24,6 +24,7 @@ See [PHPQA's available tools](https://github.com/jakzal/phpqa/#available-tools) 
 - DrupalPractice coder sniffs by the Drupal Coder module - [Checks for best practices for Drupal](https://www.drupal.org/project/coder)
 - DrupalSecure coder sniffs [outdated and will be removed]
 - PAReview.sh - [Runs various Drupal sniffs in sequence](https://pareview.sh/)
+- Drupal Check - [check for correctness, deprecation errors specifically for Drupal modules, and more](https://github.com/mglaman/drupal-check)
 
 **NOTE**: Drupal coder sniffs requires additional dependencies which aren't loaded when PHPCS is run via PHAR module (as is the case with phpcs provided by the phpqa image). For this reason, we remove the phpcs PHAR file and install it using composer.
 
