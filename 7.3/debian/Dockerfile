@@ -3,7 +3,7 @@ FROM jakzal/phpqa:php7.3
 LABEL maintainer="hussainweb@gmail.com"
 
 ENV TARGET_DIR="/usr/local/lib/drupalqa"
-ENV DRUPAL_CHECK_VERSION="1.0.8"
+ENV DRUPAL_CHECK_VERSION="1.0.11"
 
 WORKDIR ${TARGET_DIR}
 
