@@ -22,7 +22,7 @@ RUN apt-get update \
     && apt-get remove -y autoconf build-essential libfreetype6-dev libjpeg62-turbo-dev libpng-dev pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-RUN composer require --prefer-dist "squizlabs/php_codesniffer:^3.3" "drupal/coder:dev-8.x-2.x" && \
+RUN composer require --prefer-dist "squizlabs/php_codesniffer:^3.3" "drupal/coder:^8.3.7" && \
     git clone https://git.drupalcode.org/sandbox/coltrane-1921926.git drupalsecure && \
     git clone https://github.com/klausi/pareviewsh.git && \
     rm -rf ./drupalsecure/.git/ ./pareviewsh/.git/ && \
