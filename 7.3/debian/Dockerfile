@@ -1,4 +1,5 @@
-FROM jakzal/phpqa:php7.3
+ARG PHP_VERSION=php7.3
+FROM jakzal/phpqa:${PHP_VERSION}
 
 LABEL maintainer="hussainweb@gmail.com"
 
