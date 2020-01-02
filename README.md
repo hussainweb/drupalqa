@@ -12,8 +12,8 @@ This image currently only supports Debian along with PHP 7.2, 7.3, and 7.4. PHP 
 
 ### Debian
 
-- `php7.1` ([7.1/debian/Dockerfile](7.1/debian/Dockerfile))
-- `php7.2` ([7.2/debian/Dockerfile](7.2/debian/Dockerfile))
+- `php7.1` ([7.3/debian/Dockerfile](7.3/debian/Dockerfile))
+- `php7.2` ([7.3/debian/Dockerfile](7.3/debian/Dockerfile))
 - `php7.3` ([7.3/debian/Dockerfile](7.3/debian/Dockerfile))
 - `php7.4` ([7.4/debian/Dockerfile](7.4/debian/Dockerfile))
 
@@ -24,6 +24,8 @@ See [PHPQA's available tools](https://github.com/jakzal/phpqa/#available-tools) 
 - Drupal coder sniffs by the Drupal Coder module - [Checks for Drupal coding standards](https://www.drupal.org/project/coder)
 - DrupalPractice coder sniffs by the Drupal Coder module - [Checks for best practices for Drupal](https://www.drupal.org/project/coder)
 - DrupalSecure coder sniffs [outdated and will be removed]
+- [PHPCompatibility coder sniffs](https://github.com/PHPCompatibility/PHPCompatibility)
+- [Object Calisthenics coder sniffs](https://github.com/object-calisthenics/phpcs-calisthenics-rules)
 - PAReview.sh - [Runs various Drupal sniffs in sequence](https://pareview.sh/)
 - Drupal Check - [check for correctness, deprecation errors specifically for Drupal modules, and more](https://github.com/mglaman/drupal-check)
 
