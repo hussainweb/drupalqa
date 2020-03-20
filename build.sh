@@ -4,6 +4,8 @@ dir=$(dirname $0)
 
 set -ex
 
+export DOCKER_BUILDKIT=1
+
 docker pull jakzal/phpqa:php7.1
 docker pull jakzal/phpqa:php7.2
 docker pull jakzal/phpqa:php7.3
