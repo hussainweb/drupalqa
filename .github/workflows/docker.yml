@@ -40,4 +40,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: hussainweb/drupalqa:php${{ matrix.php_version }}${{ matrix.php_version == '8.0' && ',hussainweb/drupalqa:latest' || '' }}
           build-args: |
-            PHP_VERSION=${{ matrix.php_version }}
+            PHP_VERSION=php${{ matrix.php_version }}
