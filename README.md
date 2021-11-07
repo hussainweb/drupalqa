@@ -1,6 +1,6 @@
 # Static Analysis Tools for Drupal and PHP
 
-[![Docker Build](https://img.shields.io/docker/build/hussainweb/drupalqa.svg)](https://hub.docker.com/r/hussainweb/drupalqa/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hussainweb/drupalqa.svg)](https://hub.docker.com/r/hussainweb/drupalqa/)
 
 [Docker image](https://hub.docker.com/r/hussainweb/drupalqa) providing static analysis tools for Drupal and PHP. This is based on the comprehensive [PHPQA image](https://github.com/jakzal/phpqa/) and adds Drupal specific sniffs and PAReview.
 
