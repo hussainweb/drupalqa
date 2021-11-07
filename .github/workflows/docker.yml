@@ -38,4 +38,4 @@ jobs:
         with:
           context: ${{ env.DOCKERFILE_DIR }}
           push: ${{ github.event_name != 'pull_request' }}
-          tags: hussainweb/drupalqa:php${{ matrix.php_version }}${{ matrix.php_version == '8.0' && ',hussainweb/drupalqa:latest' }}
+          tags: hussainweb/drupalqa:php${{ matrix.php_version }}${{ matrix.php_version == '8.0' && ',hussainweb/drupalqa:latest' || '' }}
