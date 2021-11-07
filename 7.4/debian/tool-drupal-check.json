@@ -1,0 +1,18 @@
+{
+  "tools": [
+    {
+      "name": "drupal-check",
+      "summary": "Check Drupal code for deprecations and discover bugs via static analysis",
+      "website": "https://github.com/mglaman/drupal-check",
+      "command": {
+        "composer-bin-plugin": {
+          "package": "mglaman/drupal-check",
+          "namespace": "drupal-check",
+          "links": { "%target-dir%/drupal-check": "drupal-check" }
+        }
+      },
+      "test": "drupal-check --version",
+      "tags": ["drupal", "phpstan"]
+    }
+  ]
+}

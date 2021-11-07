@@ -4,7 +4,6 @@ FROM jakzal/phpqa:${PHP_VERSION}
 LABEL maintainer="hussainweb@gmail.com"
 
 ENV TARGET_DIR="/usr/local/lib/drupalqa"
-ENV DRUPAL_CHECK_VERSION="1.0.14"
 
 WORKDIR ${TARGET_DIR}
 
@@ -30,8 +29,7 @@ RUN composer require --prefer-dist \
     && \
     git clone https://git.drupalcode.org/sandbox/coltrane-1921926.git drupalsecure && \
     git clone https://github.com/klausi/pareviewsh.git && \
-    rm -rf ./drupalsecure/.git/ ./pareviewsh/.git/ && \
-    curl -Ls https://github.com/mglaman/drupal-check/releases/download/$DRUPAL_CHECK_VERSION/drupal-check.phar -o $TOOLBOX_TARGET_DIR/drupal-check && chmod +x $TOOLBOX_TARGET_DIR/drupal-check
+    rm -rf ./drupalsecure/.git/ ./pareviewsh/.git/
 
 # Let's remove the phpcs installed by phpqa as it cannot
 # autoload classes required in Drupal code sniffs.
@@ -40,5 +38,11 @@ RUN rm $TOOLBOX_TARGET_DIR/phpcs && \
     ln -s $TARGET_DIR/pareviewsh/pareview.sh $TOOLBOX_TARGET_DIR/pareview && \
     chmod +x $TOOLBOX_TARGET_DIR/pareview && \
     phpcs --config-set installed_paths $TARGET_DIR/vendor/drupal/coder/coder_sniffer/,$TARGET_DIR/vendor/phpcompatibility/php-compatibility,$TARGET_DIR/drupalsecure
+
+COPY tool-drupal-check.json /tool-drupal-check.json
+
+RUN php $TOOLBOX_TARGET_DIR/toolbox install \
+  --tools=/tool-drupal-check.json \
+  && rm -rf $COMPOSER_HOME/cache
 
 CMD php $TOOLBOX_TARGET_DIR/toolbox list-tools
