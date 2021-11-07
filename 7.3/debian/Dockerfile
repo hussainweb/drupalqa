@@ -26,7 +26,6 @@ RUN apt-get update \
 RUN composer require --prefer-dist \
         "squizlabs/php_codesniffer:^3.3" \
         "drupal/coder:^8.3.7" \
-        "object-calisthenics/phpcs-calisthenics-rules:^3.5" \
         "phpcompatibility/php-compatibility:^9.3" \
     && \
     git clone https://git.drupalcode.org/sandbox/coltrane-1921926.git drupalsecure && \
