@@ -26,6 +26,7 @@ RUN composer require --prefer-dist \
         "squizlabs/php_codesniffer:^3.3" \
         "drupal/coder:^8.3.7" \
         "phpcompatibility/php-compatibility:^9.3" \
+        "slevomat/coding-standard": "^7.0" \
     && \
     git clone https://git.drupalcode.org/sandbox/coltrane-1921926.git drupalsecure && \
     git clone https://github.com/klausi/pareviewsh.git && \
@@ -37,7 +38,7 @@ RUN rm $TOOLBOX_TARGET_DIR/phpcs && \
     ln -s $TARGET_DIR/vendor/bin/phpcs $TOOLBOX_TARGET_DIR && \
     ln -s $TARGET_DIR/pareviewsh/pareview.sh $TOOLBOX_TARGET_DIR/pareview && \
     chmod +x $TOOLBOX_TARGET_DIR/pareview && \
-    phpcs --config-set installed_paths $TARGET_DIR/vendor/drupal/coder/coder_sniffer/,$TARGET_DIR/vendor/phpcompatibility/php-compatibility,$TARGET_DIR/drupalsecure
+    phpcs --config-set installed_paths $TARGET_DIR/vendor/drupal/coder/coder_sniffer/,$TARGET_DIR/vendor/phpcompatibility/php-compatibility,$TARGET_DIR/drupalsecure,$TARGET_DIR/vendor/slevomat/coding-standard/
 
 COPY tool-drupal-check.json /tool-drupal-check.json
 
