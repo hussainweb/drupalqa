@@ -33,6 +33,7 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: docker/login-action@v1
         with:
+          registry: ghcr.io
           username: hussainweb
           password: ${{ secrets.GITHUB_TOKEN }}
       -
