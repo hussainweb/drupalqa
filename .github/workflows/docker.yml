@@ -8,14 +8,14 @@ on:
     branches: [ main ]
 
 env:
-  DOCKERFILE_DIR: '7.3'
+  DOCKERFILE_DIR: '7.4'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php_version: ['7.3', '7.4', '8.0']
+        php_version: ['7.4', '8.0', '8.1']
 
     steps:
       - name: Checkout repository
@@ -38,7 +38,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Set Dockerfile directory
-        if: ${{ matrix.php_version == '7.4' || matrix.php_version == '8.0' }}
+        if: ${{ matrix.php_version == '7.4' || matrix.php_version == '8.0' || matrix.php_version == '8.1' }}
         run: echo "DOCKERFILE_DIR=7.4" >> $GITHUB_ENV
       - name: Build and push Docker image for PHP ${{ matrix.php_version }}
         uses: docker/build-push-action@v2
@@ -47,8 +47,8 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
             hussainweb/drupalqa:php${{ matrix.php_version }}
-            ${{ matrix.php_version == '8.0' && 'hussainweb/drupalqa:latest' || '' }}
+            ${{ matrix.php_version == '8.1' && 'hussainweb/drupalqa:latest' || '' }}
             ghcr.io/hussainweb/drupalqa:php${{ matrix.php_version }}
-            ${{ matrix.php_version == '8.0' && 'ghcr.io/hussainweb/drupalqa:latest' || '' }}
+            ${{ matrix.php_version == '8.1' && 'ghcr.io/hussainweb/drupalqa:latest' || '' }}
           build-args: |
             PHP_VERSION=php${{ matrix.php_version }}

@@ -26,7 +26,7 @@ RUN composer require --prefer-dist \
         "squizlabs/php_codesniffer:^3.5" \
         "drupal/coder:^8.3.7" \
         "phpcompatibility/php-compatibility:^9.3" \
-        "slevomat/coding-standard:^7.0" \
+        "slevomat/coding-standard:^8.0" \
     && \
     git clone https://git.drupalcode.org/sandbox/coltrane-1921926.git drupalsecure && \
     git clone https://github.com/klausi/pareviewsh.git && \
