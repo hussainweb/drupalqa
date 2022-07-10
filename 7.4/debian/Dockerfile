@@ -22,7 +22,9 @@ RUN apt-get update \
     && apt-get remove -y autoconf build-essential libfreetype6-dev libjpeg62-turbo-dev libpng-dev pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-RUN composer require --prefer-dist \
+RUN echo "{}" > composer.json && \
+    composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true && \
+    composer require --prefer-dist \
         "squizlabs/php_codesniffer:^3.5" \
         "drupal/coder:^8.3.7" \
         "phpcompatibility/php-compatibility:^9.3" \
