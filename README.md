@@ -45,3 +45,7 @@ To run the selected tool inside the container, you'll need to mount the project 
 ```bash
 docker run --init -it --rm -v $(pwd):/project -v $(pwd)/tmp-phpqa:/tmp -w /project hussainweb/drupalqa phpstan analyse web/modules/custom
 ```
+
+## GitHub Action
+
+You can run DrupalQA as part of your GitHub Actions workflow directly using the [associate action](https://github.com/hussainweb/drupalqa-action). Visit the [action page readme](https://github.com/hussainweb/drupalqa-action#readme) or the [marketplace page](https://github.com/marketplace/actions/drupalqa) to learn more.
