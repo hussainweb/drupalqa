@@ -8,14 +8,14 @@ on:
     branches: [ main ]
 
 env:
-  DOCKERFILE_DIR: '7.4'
+  DOCKERFILE_DIR: '8.x'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php_version: ['7.4', '8.0', '8.1']
+        php_version: ['8.0', '8.1', '8.2']
 
     steps:
       - name: Checkout repository
@@ -43,8 +43,8 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
             hussainweb/drupalqa:php${{ matrix.php_version }}
-            ${{ matrix.php_version == '8.1' && 'hussainweb/drupalqa:latest' || '' }}
+            ${{ matrix.php_version == '8.2' && 'hussainweb/drupalqa:latest' || '' }}
             ghcr.io/hussainweb/drupalqa:php${{ matrix.php_version }}
-            ${{ matrix.php_version == '8.1' && 'ghcr.io/hussainweb/drupalqa:latest' || '' }}
+            ${{ matrix.php_version == '8.2' && 'ghcr.io/hussainweb/drupalqa:latest' || '' }}
           build-args: |
             PHP_VERSION=php${{ matrix.php_version }}
