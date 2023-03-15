@@ -36,10 +36,6 @@ jobs:
           registry: ghcr.io
           username: hussainweb
           password: ${{ secrets.GITHUB_TOKEN }}
-      -
-        name: Set Dockerfile directory
-        if: ${{ matrix.php_version == '7.4' || matrix.php_version == '8.0' || matrix.php_version == '8.1' }}
-        run: echo "DOCKERFILE_DIR=7.4" >> $GITHUB_ENV
       - name: Build and push Docker image for PHP ${{ matrix.php_version }}
         uses: docker/build-push-action@v2
         with:
