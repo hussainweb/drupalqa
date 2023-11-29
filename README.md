@@ -17,6 +17,7 @@ This image currently only supports Debian along with 8.0, 8.1, and 8.2. PHP 7.x 
 - `php8.0` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
 - `php8.1` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
 - `php8.2` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
+- `php8.3` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
 
 ## Available Tools
 
@@ -24,7 +25,7 @@ See [PHPQA's available tools](https://github.com/jakzal/phpqa/#available-tools) 
 
 - Drupal coder sniffs by the Drupal Coder module - [Checks for Drupal coding standards](https://www.drupal.org/project/coder)
 - DrupalPractice coder sniffs by the Drupal Coder module - [Checks for best practices for Drupal](https://www.drupal.org/project/coder)
-- DrupalSecure coder sniffs [outdated and will be removed]
+- DrupalSecure coder sniffs (outdated and will be removed)
 - [PHPCompatibility coder sniffs](https://github.com/PHPCompatibility/PHPCompatibility)
 - PAReview.sh - [Runs various Drupal sniffs in sequence](https://pareview.sh/)
 - Drupal Check - [check for correctness, deprecation errors specifically for Drupal modules, and more](https://github.com/mglaman/drupal-check)
