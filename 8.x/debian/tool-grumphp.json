@@ -1,0 +1,18 @@
+{
+  "tools": [
+    {
+      "name": "grumphp",
+      "summary": "A PHP code-quality tool (shim version)",
+      "website": "https://github.com/phpro/grumphp-shim",
+      "command": {
+        "composer-bin-plugin": {
+          "package": "phpro/grumphp-shim",
+          "namespace": "grumphp",
+          "links": { "%target-dir%/grumphp": "grumphp" }
+        }
+      },
+      "test": "grumphp --version",
+      "tags": ["grumphp"]
+    }
+  ]
+}

@@ -46,6 +46,7 @@ COPY tool-drupal-check.json /tool-drupal-check.json
 
 RUN php $TOOLBOX_TARGET_DIR/toolbox install \
   --tools=/tool-drupal-check.json \
+  --tools=/tool-grumphp.json \
   && rm -rf $COMPOSER_HOME/cache
 
 CMD php $TOOLBOX_TARGET_DIR/toolbox list-tools
