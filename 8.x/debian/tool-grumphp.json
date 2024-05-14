@@ -2,13 +2,12 @@
   "tools": [
     {
       "name": "grumphp",
-      "summary": "A PHP code-quality tool (shim version)",
+      "summary": "A PHP code-quality tool",
       "website": "https://github.com/phpro/grumphp-shim",
       "command": {
-        "composer-bin-plugin": {
-          "package": "phpro/grumphp-shim",
-          "namespace": "grumphp",
-          "links": { "%target-dir%/grumphp": "grumphp" }
+        "phar-download": {
+          "phar": "https://github.com/phpro/grumphp/releases/latest/download/grumphp.phar",
+          "bin": "%target-dir%/grumphp"
         }
       },
       "test": "grumphp --version",
