@@ -42,7 +42,7 @@ RUN rm $TOOLBOX_TARGET_DIR/phpcs && \
     chmod +x $TOOLBOX_TARGET_DIR/pareview && \
     phpcs --config-set installed_paths $TARGET_DIR/vendor/drupal/coder/coder_sniffer/,$TARGET_DIR/vendor/phpcompatibility/php-compatibility,$TARGET_DIR/drupalsecure,$TARGET_DIR/vendor/slevomat/coding-standard/
 
-COPY tool-drupal-check.json /tool-drupal-check.json
+COPY tool-* /
 
 RUN php $TOOLBOX_TARGET_DIR/toolbox install \
   --tools=/tool-drupal-check.json \
