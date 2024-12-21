@@ -18,6 +18,7 @@ This image currently only supports Debian along with 8.0, 8.1, and 8.2. PHP 7.x 
 - `php8.1` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
 - `php8.2` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
 - `php8.3` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
+- `php8.4` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
 
 ## Available Tools
 
