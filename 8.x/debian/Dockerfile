@@ -34,10 +34,12 @@ RUN echo "{}" > composer.json && \
     git clone https://github.com/klausi/pareviewsh.git && \
     rm -rf ./drupalsecure/.git/ ./pareviewsh/.git/
 
-# Let's remove the phpcs installed by phpqa as it cannot
+# Let's remove the phpcs/phpcbf installed by phpqa as it cannot
 # autoload classes required in Drupal code sniffs.
 RUN rm $TOOLBOX_TARGET_DIR/phpcs && \
+    rm $TOOLBOX_TARGET_DIR/phpcbf && \
     ln -s $TARGET_DIR/vendor/bin/phpcs $TOOLBOX_TARGET_DIR && \
+    ln -s $TARGET_DIR/vendor/bin/phpcbf $TOOLBOX_TARGET_DIR && \
     ln -s $TARGET_DIR/pareviewsh/pareview.sh $TOOLBOX_TARGET_DIR/pareview && \
     chmod +x $TOOLBOX_TARGET_DIR/pareview && \
     phpcs --config-set installed_paths $TARGET_DIR/vendor/drupal/coder/coder_sniffer/,$TARGET_DIR/vendor/phpcompatibility/php-compatibility,$TARGET_DIR/drupalsecure,$TARGET_DIR/vendor/slevomat/coding-standard/
