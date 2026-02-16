@@ -8,7 +8,7 @@
 
 DockerHub repository: [https://hub.docker.com/r/hussainweb/drupalqa](https://hub.docker.com/r/hussainweb/drupalqa)
 
-This image currently only supports Debian along with 8.2, 8.3, and 8.4. Older images are available but no longer supported by the [upstream image](https://github.com/jakzal/phpqa/).
+This image currently only supports Debian along with 8.2, 8.3, 8.4, and 8.5. Older images are available but no longer supported by the [upstream image](https://github.com/jakzal/phpqa/).
 
 ### Debian
 
@@ -19,6 +19,7 @@ This image currently only supports Debian along with 8.2, 8.3, and 8.4. Older im
 - `php8.2` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
 - `php8.3` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
 - `php8.4` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
+- `php8.5` ([8.x/debian/Dockerfile](8.x/debian/Dockerfile))
 
 ## Available Tools
 
