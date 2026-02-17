@@ -27,6 +27,7 @@ See [PHPQA's available tools](https://github.com/jakzal/phpqa/#available-tools) 
 
 - Drupal coder sniffs by the Drupal Coder module - [Checks for Drupal coding standards](https://www.drupal.org/project/coder)
 - DrupalPractice coder sniffs by the Drupal Coder module - [Checks for best practices for Drupal](https://www.drupal.org/project/coder)
+- DrupalSecure coder sniffs (outdated and will be removed)
 - [PHPCompatibility coder sniffs](https://github.com/PHPCompatibility/PHPCompatibility)
 - PAReview.sh - [Runs various Drupal sniffs in sequence](https://pareview.sh/)
 - Drupal Check - [check for correctness, deprecation errors specifically for Drupal modules, and more](https://github.com/mglaman/drupal-check)
